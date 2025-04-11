@@ -3,60 +3,12 @@
   "WorkspaceRootPath": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\components\\pages\\fornecedor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\components\\pages\\fornecedor.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\components\\pages\\produtos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\components\\pages\\produtos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\models\\produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\models\\produtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\models\\fornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\models\\fornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\components\\pages\\estoque.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\components\\pages\\estoque.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\models\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\models\\estoque.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\components\\pages\\clientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\components\\pages\\clientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\models\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\models\\clientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\components\\pages\\weather.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\visualizadorfox.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\visualizadorfox.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|c:\\temp\\visualizadorfox\\visualizadorfox\\visualizadorfox\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{123D8AA3-9170-485A-B95E-F81CDEC42A4E}|VisualizadorFox\\VisualizadorFox.csproj|solutionrelative:visualizadorfox\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,184 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Weather.razor",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Pages\\Weather.razor",
-              "RelativeDocumentMoniker": "VisualizadorFox\\Components\\Pages\\Weather.razor",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Pages\\Weather.razor",
-              "RelativeToolTip": "VisualizadorFox\\Components\\Pages\\Weather.razor",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAD8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-11T14:04:43.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Produtos.razor",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Pages\\Produtos.razor",
-              "RelativeDocumentMoniker": "VisualizadorFox\\Components\\Pages\\Produtos.razor",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Pages\\Produtos.razor",
-              "RelativeToolTip": "VisualizadorFox\\Components\\Pages\\Produtos.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-11T13:58:51.995Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Fornecedor.razor",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Pages\\Fornecedor.razor",
-              "RelativeDocumentMoniker": "VisualizadorFox\\Components\\Pages\\Fornecedor.razor",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Pages\\Fornecedor.razor",
-              "RelativeToolTip": "VisualizadorFox\\Components\\Pages\\Fornecedor.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-11T13:58:45.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Estoque.razor",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Pages\\Estoque.razor",
-              "RelativeDocumentMoniker": "VisualizadorFox\\Components\\Pages\\Estoque.razor",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Pages\\Estoque.razor",
-              "RelativeToolTip": "VisualizadorFox\\Components\\Pages\\Estoque.razor",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-11T13:58:39.954Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Clientes.razor",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Pages\\Clientes.razor",
-              "RelativeDocumentMoniker": "VisualizadorFox\\Components\\Pages\\Clientes.razor",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Pages\\Clientes.razor",
-              "RelativeToolTip": "VisualizadorFox\\Components\\Pages\\Clientes.razor",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-11T13:58:33.039Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Layout\\NavMenu.razor",
               "RelativeDocumentMoniker": "VisualizadorFox\\Components\\Layout\\NavMenu.razor",
               "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Layout\\NavMenu.razor",
               "RelativeToolTip": "VisualizadorFox\\Components\\Layout\\NavMenu.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-11T13:56:16.939Z",
+              "WhenOpened": "2025-04-11T17:51:19.122Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Program.cs",
-              "RelativeDocumentMoniker": "VisualizadorFox\\Program.cs",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Program.cs",
-              "RelativeToolTip": "VisualizadorFox\\Program.cs",
+              "DocumentIndex": 1,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "VisualizadorFox\\Components\\Layout\\MainLayout.razor",
+              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "VisualizadorFox\\Components\\Layout\\MainLayout.razor",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T13:45:44.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\appsettings.json",
-              "RelativeDocumentMoniker": "VisualizadorFox\\appsettings.json",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\appsettings.json",
-              "RelativeToolTip": "VisualizadorFox\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-11T13:45:18.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "VisualizadorFox\\Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "VisualizadorFox\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T13:44:49.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Produtos.cs",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Models\\Produtos.cs",
-              "RelativeDocumentMoniker": "VisualizadorFox\\Models\\Produtos.cs",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Models\\Produtos.cs",
-              "RelativeToolTip": "VisualizadorFox\\Models\\Produtos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T13:43:43.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Fornecedor.cs",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Models\\Fornecedor.cs",
-              "RelativeDocumentMoniker": "VisualizadorFox\\Models\\Fornecedor.cs",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Models\\Fornecedor.cs",
-              "RelativeToolTip": "VisualizadorFox\\Models\\Fornecedor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T13:43:35.758Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Estoque.cs",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Models\\Estoque.cs",
-              "RelativeDocumentMoniker": "VisualizadorFox\\Models\\Estoque.cs",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Models\\Estoque.cs",
-              "RelativeToolTip": "VisualizadorFox\\Models\\Estoque.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T13:43:27.054Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Clientes.cs",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Models\\Clientes.cs",
-              "RelativeDocumentMoniker": "VisualizadorFox\\Models\\Clientes.cs",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\Models\\Clientes.cs",
-              "RelativeToolTip": "VisualizadorFox\\Models\\Clientes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-11T13:43:08.066Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "VisualizadorFox",
-              "DocumentMoniker": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox.csproj",
-              "RelativeDocumentMoniker": "VisualizadorFox\\VisualizadorFox.csproj",
-              "ToolTip": "C:\\Temp\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox\\VisualizadorFox.csproj",
-              "RelativeToolTip": "VisualizadorFox\\VisualizadorFox.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABSAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-11T13:41:58.657Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-11T17:48:59.27Z",
               "EditorCaption": ""
             }
           ]

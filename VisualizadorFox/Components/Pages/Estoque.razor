@@ -1,54 +1,155 @@
-﻿@page "/estoque"
+﻿@page "/Estoque"
 @using System.ComponentModel.DataAnnotations
 
-<h3>Lista de Itens em Estoque</h3>
+<h3 class="mb-4">Estoque</h3>
 
-@if (estoque.Count == 0)
+<div class="card p-3 mb-4 shadow-sm">
+    <div class="d-flex gap-2 align-items-center">
+        <input type="text" class="form-control w-25" placeholder="Buscar por descrição..." @bind="filtroDescricao" />
+        <button class="btn btn-outline-light bg-dark text-white" @onclick="AplicarFiltro">
+            <i class="bi bi-search me-1"></i> Filtrar
+        </button>
+    </div>
+</div>
+
+@if (estoqueFiltrado.Any())
 {
-    <p>Nenhum item em estoque.</p>
+    <div class="card shadow-sm">
+        <table class="table table-dark table-hover table-bordered mb-0">
+            <thead class="table-light text-black">
+                <tr>
+                    <th>Id</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Categoria</th>
+                    <th>Data Entrada</th>
+                    <th style="width: 120px;">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in estoqueFiltrado)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Descricao</td>
+                        <td>@item.Quantidade</td>
+                        <td>@item.Categoria</td>
+                        <td>@item.DataEntrada.ToString("dd/MM/yyyy")</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-info" @onclick="() => ExibirDetalhes(item)">
+                                <i class="bi bi-eye"></i> Detalhes
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 }
 else
 {
-    <table class="table table-striped table-bordered">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Descrição</th>
-                <th>Quantidade</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in estoque)
-            {
-                <tr>
-                    <td>@item.Id</td>
-                    <td>@item.Descricao</td>
-                    <td>@item.Quantidade</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <div class="alert alert-warning mt-3">Nenhum item encontrado no estoque.</div>
+}
+
+@if (itemSelecionado is not null)
+{
+    <div class="card mt-4 shadow-sm border border-primary">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <strong>Detalhes do Item</strong>
+            <button class="btn btn-sm btn-light" @onclick="FecharDetalhes">Fechar</button>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Descrição:</dt>
+                <dd class="col-sm-9">@itemSelecionado.Descricao</dd>
+
+                <dt class="col-sm-3">Quantidade:</dt>
+                <dd class="col-sm-9">@itemSelecionado.Quantidade</dd>
+
+                <dt class="col-sm-3">Categoria:</dt>
+                <dd class="col-sm-9">@itemSelecionado.Categoria</dd>
+
+                <dt class="col-sm-3">Data de Entrada:</dt>
+                <dd class="col-sm-9">@itemSelecionado.DataEntrada.ToString("dd/MM/yyyy")</dd>
+            </dl>
+        </div>
+    </div>
 }
 
 @code {
-    private List<EstoqueModel> estoque = new()
+    private string filtroDescricao = string.Empty;
+    private List<EstoqueModel> estoque = new();
+    private List<EstoqueModel> estoqueFiltrado = new();
+    private EstoqueModel? itemSelecionado;
+
+    protected override void OnInitialized()
     {
-        new EstoqueModel { Id = 1, Descricao = "Produto A", Quantidade = 25 },
-        new EstoqueModel { Id = 2, Descricao = "Produto B", Quantidade = 10 },
-        new EstoqueModel { Id = 3, Descricao = "Produto C", Quantidade = 50 }
-    };
+        estoque = new List<EstoqueModel>
+        {
+            new EstoqueModel
+            {
+                Id = 1,
+                Descricao = "Teclado Mecânico",
+                Quantidade = 15,
+                Categoria = "Periféricos",
+                DataEntrada = DateTime.Today.AddDays(-10)
+            },
+            new EstoqueModel
+            {
+                Id = 2,
+                Descricao = "Mouse Gamer",
+                Quantidade = 30,
+                Categoria = "Periféricos",
+                DataEntrada = DateTime.Today.AddDays(-5)
+            },
+            new EstoqueModel
+            {
+                Id = 3,
+                Descricao = "Monitor 27\"",
+                Quantidade = 8,
+                Categoria = "Monitores",
+                DataEntrada = DateTime.Today.AddDays(-2)
+            }
+        };
+
+        estoqueFiltrado = estoque;
+    }
+
+    private void AplicarFiltro()
+    {
+        estoqueFiltrado = estoque
+            .Where(e => string.IsNullOrWhiteSpace(filtroDescricao) ||
+                        e.Descricao.Contains(filtroDescricao, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        itemSelecionado = null;
+    }
+
+    private void ExibirDetalhes(EstoqueModel item)
+    {
+        itemSelecionado = item;
+    }
+
+    private void FecharDetalhes()
+    {
+        itemSelecionado = null;
+    }
 
     public class EstoqueModel
     {
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "A descrição é obrigatória.")]
-        [StringLength(100, ErrorMessage = "A descrição deve ter no máximo 100 caracteres.")]
+        [Required]
+        [StringLength(100)]
         public string Descricao { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "A quantidade é obrigatória.")]
-        [Range(0, int.MaxValue, ErrorMessage = "A quantidade não pode ser negativa.")]
+        [Range(0, int.MaxValue)]
         public int Quantidade { get; set; }
+
+        [StringLength(50)]
+        public string Categoria { get; set; } = string.Empty;
+
+        public DateTime DataEntrada { get; set; }
     }
 }

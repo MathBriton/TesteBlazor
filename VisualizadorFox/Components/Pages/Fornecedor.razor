@@ -1,106 +1,126 @@
-﻿@page "/fornecedor"
+﻿@page "/Fornecedor"
 @using System.ComponentModel.DataAnnotations
 
-<h3>Lista de Fornecedores</h3>
+<h3 class="mb-4">Produtos</h3>
 
-@if (fornecedores.Count == 0)
+<div class="card p-3 mb-4 shadow-sm">
+    <div class="d-flex gap-2 align-items-center">
+        <input class="form-control w-25" placeholder="Buscar por nome..." @bind="filtroNome" />
+        <button class="btn btn-outline-light bg-dark text-white" @onclick="AplicarFiltro">
+            <i class="bi bi-search me-1"></i> Filtrar
+        </button>
+    </div>
+</div>
+
+@if (produtosFiltrados.Any())
 {
-    <p>Nenhum fornecedor cadastrado.</p>
+    <div class="card shadow-sm">
+        <table class="table table-dark table-hover table-bordered mb-0">
+            <thead class="table-light text-black">
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Preço</th>
+                    <th style="width: 120px;">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var produto in produtosFiltrados)
+                {
+                    <tr>
+                        <td>@produto.Id</td>
+                        <td>@produto.Nome</td>
+                        <td>@produto.Categoria</td>
+                        <td>R$ @produto.Preco.ToString("F2")</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-info" @onclick="() => ExibirDetalhes(produto)">
+                                <i class="bi bi-eye"></i> Detalhes
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 }
 else
 {
-    <table class="table table-striped table-bordered">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nome Fantasia</th>
-                <th>Razão Social</th>
-                <th>Telefone</th>
-                <th>Rua</th>
-                <th>Bairro</th>
-                <th>Município</th>
-                <th>CPF</th>
-                <th>CNPJ</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var f in fornecedores)
-            {
-                <tr>
-                    <td>@f.Id</td>
-                    <td>@f.Fantasia</td>
-                    <td>@f.RazaoSocial</td>
-                    <td>@f.Telefone</td>
-                    <td>@f.Rua</td>
-                    <td>@f.Bairro</td>
-                    <td>@f.Municipio</td>
-                    <td>@f.CPF</td>
-                    <td>@f.CNPJ</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <div class="alert alert-warning mt-3">Nenhum produto encontrado.</div>
+}
+
+@if (produtoSelecionado is not null)
+{
+    <div class="card mt-4 shadow-sm border border-info">
+        <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+            <strong>Detalhes do Produto</strong>
+            <button class="btn btn-sm btn-light" @onclick="FecharDetalhes">Fechar</button>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Nome:</dt>
+                <dd class="col-sm-9">@produtoSelecionado.Nome</dd>
+
+                <dt class="col-sm-3">Categoria:</dt>
+                <dd class="col-sm-9">@produtoSelecionado.Categoria</dd>
+
+                <dt class="col-sm-3">Preço:</dt>
+                <dd class="col-sm-9">R$ @produtoSelecionado.Preco.ToString("F2")</dd>
+            </dl>
+        </div>
+    </div>
 }
 
 @code {
-    private List<FornecedorModel> fornecedores = new()
-    {
-        new FornecedorModel
-        {
-            Id = 1,
-            Fantasia = "Loja da Maria",
-            RazaoSocial = "Maria Comércio LTDA",
-            Telefone = "(11) 91234-5678",
-            Rua = "Rua das Flores, 123",
-            Bairro = "Centro",
-            Municipio = "São Paulo",
-            CPF = "123.456.789-00",
-            CNPJ = "12.345.678/0001-00"
-        },
-        new FornecedorModel
-        {
-            Id = 2,
-            Fantasia = "Distribuidora XPTO",
-            RazaoSocial = "XPTO Distribuição S/A",
-            Telefone = "(21) 99888-7766",
-            Rua = "Av. Brasil, 456",
-            Bairro = "Industrial",
-            Municipio = "Rio de Janeiro",
-            CPF = "",
-            CNPJ = "98.765.432/0001-99"
-        }
-    };
+    private string filtroNome = string.Empty;
+    private List<ProdutoModel> produtos = new();
+    private List<ProdutoModel> produtosFiltrados = new();
+    private ProdutoModel? produtoSelecionado;
 
-    public class FornecedorModel
+    protected override void OnInitialized()
+    {
+        produtos = new List<ProdutoModel>
+        {
+            new ProdutoModel { Id = 1, Nome = "Notebook Dell", Categoria = "Informática", Preco = 4500.00M },
+            new ProdutoModel { Id = 2, Nome = "Smartphone Samsung", Categoria = "Celulares", Preco = 2300.00M },
+            new ProdutoModel { Id = 3, Nome = "Cadeira Gamer", Categoria = "Móveis", Preco = 1200.00M }
+        };
+
+        produtosFiltrados = produtos;
+    }
+
+    private void AplicarFiltro()
+    {
+        produtosFiltrados = produtos
+            .Where(p => string.IsNullOrWhiteSpace(filtroNome) ||
+                        p.Nome.Contains(filtroNome, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        produtoSelecionado = null;
+    }
+
+    private void ExibirDetalhes(ProdutoModel produto)
+    {
+        produtoSelecionado = produto;
+    }
+
+    private void FecharDetalhes()
+    {
+        produtoSelecionado = null;
+    }
+
+    public class ProdutoModel
     {
         [Key]
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "O nome fantasia é obrigatório.")]
-        [StringLength(100, ErrorMessage = "O nome fantasia deve ter no máximo 100 caracteres.")]
-        public string Fantasia { get; set; } = string.Empty;
+        [Required]
+        [StringLength(100)]
+        public string Nome { get; set; } = string.Empty;
 
-        [Required(ErrorMessage = "A razão social é obrigatória.")]
-        [StringLength(150, ErrorMessage = "A razão social deve ter no máximo 150 caracteres.")]
-        public string RazaoSocial { get; set; } = string.Empty;
+        public string Categoria { get; set; } = string.Empty;
 
-        [Phone(ErrorMessage = "Telefone inválido.")]
-        [StringLength(20, ErrorMessage = "O telefone deve ter no máximo 20 caracteres.")]
-        public string Telefone { get; set; } = string.Empty;
-
-        [StringLength(100, ErrorMessage = "A rua deve ter no máximo 100 caracteres.")]
-        public string Rua { get; set; } = string.Empty;
-
-        [StringLength(60, ErrorMessage = "O bairro deve ter no máximo 60 caracteres.")]
-        public string Bairro { get; set; } = string.Empty;
-
-        [StringLength(60, ErrorMessage = "O município deve ter no máximo 60 caracteres.")]
-        public string Municipio { get; set; } = string.Empty;
-
-        [RegularExpression(@"\d{3}\.\d{3}\.\d{3}-\d{2}", ErrorMessage = "CPF deve estar no formato 000.000.000-00")]
-        public string CPF { get; set; } = string.Empty;
-
-        [RegularExpression(@"\d{2}\.\d{3}\.\d{3}/\d{4}-\d{2}", ErrorMessage = "CNPJ deve estar no formato 00.000.000/0000-00")]
-        public string CNPJ { get; set; } = string.Empty;
+        [Range(0, double.MaxValue)]
+        public decimal Preco { get; set; }
     }
 }

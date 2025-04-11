@@ -1,54 +1,83 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="">VisualizadorFox</a>
-    </div>
+﻿
+
+<style>
+	.bg-white-gradient {
+		background: linear-gradient(to right, #ffffff, #f0f0f0);
+	}
+
+	.text-blue-gradient {
+		background: linear-gradient(90deg, #007cf0, #00dfd8);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+	}
+</style>
+
+
+
+<div class="top-row ps-3 navbar navbar-dark bg-white-gradient">
+	<div class="container-fluid">
+		<a class="navbar-brand text-blue-gradient" href="">VisualizadorFox</a>
+	</div>
 </div>
+
+
 
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-    <nav class="flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
+	<nav class="flex-column">
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+				<img src="images/home.png" alt="Cliente" width="20" height="20" class="me-2" /> Dashboard
+			</NavLink>
+		</div>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="clientes">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Clientes
-            </NavLink>
-        </div>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="estoque">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Estoque
-            </NavLink>
-        </div>
+		@* Clientes *@
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="fornecedor">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Fornecedor
-            </NavLink>
-        </div>
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="/Clientes">
+				<img src="images/cliente.png" alt="Cliente" width="20" height="20" class="me-2" /> Clientes
+			</NavLink>
+		</div>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="produtos">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Produtos
-            </NavLink>
-        </div>
 
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
-        </div>
-    </nav>
+
+
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="/Estoque">
+				<img src="images/estoque.png" alt="Estoque" width="20" height="20" class="me-2" />
+				Estoque
+			</NavLink>
+		</div>
+
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="/Fornecedor">
+				<img src="images/fornecedor.png" alt="Fornecedor" width="20" height="20" class="me-2" />
+				Fornecedor
+			</NavLink>
+		</div>
+
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="/Produtos">
+				<img src="images/produtos.png" alt="Produtos" width="20" height="20" class="me-2" />
+				Produtos
+			</NavLink>
+		</div>
+
+	</nav>
 </div>
 
+@code {
+	private void AbrirFiltro(MouseEventArgs args)
+	{
+		throw new NotImplementedException();
+	}
+	private void AbrirDetalhesRapido(MouseEventArgs args)
+	{
+		throw new NotImplementedException();
+	}
+}
