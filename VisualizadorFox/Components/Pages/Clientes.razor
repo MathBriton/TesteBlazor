@@ -1,0 +1,60 @@
+﻿@page "/clientes"
+@using System.ComponentModel.DataAnnotations
+
+<h3>Lista de Clientes</h3>
+
+@if (clientes.Count == 0)
+{
+    <p>Nenhum cliente disponível.</p>
+}
+else
+{
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cliente in clientes)
+            {
+                <tr>
+                    <td>@cliente.Id</td>
+                    <td>@cliente.Nome</td>
+                    <td>@cliente.Cpf</td>
+                    <td>@cliente.Telefone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<ClienteModel> clientes = new()
+    {
+        new ClienteModel { Id = 1, Nome = "João da Silva", Cpf = "123.456.789-00", Telefone = "(11) 99999-1234" },
+        new ClienteModel { Id = 2, Nome = "Maria Oliveira", Cpf = "987.654.321-00", Telefone = "(21) 98888-4321" },
+        new ClienteModel { Id = 3, Nome = "Carlos Souza", Cpf = "111.222.333-44", Telefone = "(31) 97777-1111" }
+    };
+
+    public class ClienteModel
+    {
+        [Key]
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "O nome é obrigatório.")]
+        [StringLength(100, ErrorMessage = "O nome deve ter no máximo 100 caracteres.")]
+        public string Nome { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "O CPF é obrigatório.")]
+        [RegularExpression(@"\d{3}\.\d{3}\.\d{3}-\d{2}", ErrorMessage = "CPF deve estar no formato 000.000.000-00")]
+        public string Cpf { get; set; } = string.Empty;
+
+        [Phone(ErrorMessage = "Número de telefone inválido.")]
+        [StringLength(20, ErrorMessage = "O telefone deve ter no máximo 20 caracteres.")]
+        public string Telefone { get; set; } = string.Empty;
+    }
+}
